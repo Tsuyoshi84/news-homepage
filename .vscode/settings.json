@@ -1,6 +1,10 @@
 {
-	"cSpell.words": ["Astro"],
+	"cSpell.words": [
+    "Astro",
+    "pnpm"
+  ],
 	"prettier.documentSelectors": ["**/*.astro"],
+  "typescript.tsdk": "node_modules/typescript/lib",
 	"[astro]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	}

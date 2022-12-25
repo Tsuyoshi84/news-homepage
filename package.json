@@ -10,7 +10,9 @@
 		"preview": "astro preview",
 		"astro": "astro",
 		"lint": "eslint --ext .js,.ts,.astro src",
-		"format": "prettier --write --plugin-search-dir=. ."
+		"format": "prettier --write --plugin-search-dir=. .",
+		"format:check": "prettier --list-different --plugin-search-dir=. .",
+		"check": "astro check"
 	},
 	"dependencies": {
 		"astro": "^1.7.2"
@@ -20,6 +22,7 @@
 		"eslint": "^8.30.0",
 		"eslint-plugin-astro": "^0.21.1",
 		"prettier": "^2.8.1",
-		"prettier-plugin-astro": "^0.7.0"
+		"prettier-plugin-astro": "^0.7.0",
+		"tsc": "^2.0.4"
 	}
 }
