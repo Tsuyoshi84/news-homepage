@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["Astro"]
+	"cSpell.words": ["Astro"],
+	"prettier.documentSelectors": ["**/*.astro"],
+	"[astro]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }
