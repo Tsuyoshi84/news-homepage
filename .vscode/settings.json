@@ -1,7 +1,14 @@
 {
+  "cSpell.ignorePaths": [
+    "package.json",
+    "pnpm-lock.yaml",
+    ".vscode/**",
+  ],
 	"cSpell.words": [
     "Astro",
-    "pnpm"
+    "astrojs",
+    "pnpm",
+    "tailwindcss"
   ],
 	"prettier.documentSelectors": ["**/*.astro"],
   "typescript.tsdk": "node_modules/typescript/lib",

@@ -34,8 +34,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Tsuyoshi84/news-homepage)
-- Live Site URL: [Add live site URL here](https://news-homepage-f4d9k6u9i-tsuyoshi84.vercel.app/)
+- Solution URL: <https://github.com/Tsuyoshi84/news-homepage>
+- Live Site URL: <https://news-homepage-f4d9k6u9i-tsuyoshi84.vercel.app/>
 
 ## My process
 
@@ -47,3 +47,4 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS Grid
 - Mobile-first workflow
 - [Astro](https://astro.build/)
+- [Tailwind CSS](https://tailwindcss.com/)
