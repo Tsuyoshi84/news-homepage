@@ -8,11 +8,9 @@ import NewsSection from '../components/NewsSection.astro'
 
 <Layout title="Frontend Mentor | News homepage">
 	<Header />
-	<main>
+	<main class="grid gap-16 pb-16 lg:grid-cols-main lg:grid-rows-main lg:gap-8">
 		<MainSection />
 		<NewsSection />
-		<ArticleSection />
+		<ArticleSection class="lg:col-span-2" />
 	</main>
 </Layout>
-
-<style></style>

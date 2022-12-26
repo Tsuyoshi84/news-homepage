@@ -1,15 +1,39 @@
-<section>
-	<pre>
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
+---
+import ArticleCard from './ArticleCard.astro'
 
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
+const articles = [
+	{
+		number: '01',
+		title: 'Reviving Retro PCs',
+		content: 'What happens when old PCs are given modern upgrades?',
+		imagePath: 'image-retro-pcs.jpg',
+	},
+	{
+		number: '02',
+		title: 'Top 10 Laptops of 2022',
+		content: 'Our best picks for various needs and budgets.',
+		imagePath: 'image-top-laptops.jpg',
+	},
+	{
+		number: '03',
+		title: 'The Growth of Gaming',
+		content: 'How the pandemic has sparked fresh opportunities.',
+		imagePath: 'image-gaming-growth.jpg',
+	},
+] as const
 
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-</pre>
+const { class: className } = Astro.props
+---
+
+<section class:list={['flex flex-col lg:flex-row', 'gap-8', className]}>
+	{
+		articles.map(({ number, title, content, imagePath }) => (
+			<ArticleCard
+				number={number}
+				title={title}
+				content={content}
+				imagePath={imagePath}
+			/>
+		))
+	}
 </section>
