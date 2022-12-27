@@ -1,11 +1,74 @@
-<header>
-	<nav>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/new">New</a></li>
-			<li><a href="/popular">Popular</a></li>
-			<li><a href="/trending">Trending</a></li>
-			<li><a href="/categories">Categories</a></li>
+---
+const menus = [
+	{ title: 'Home', path: '/' },
+	{ title: 'New', path: '/new' },
+	{ title: 'Popular', path: '/popular' },
+	{ title: 'Trending', path: '/trending' },
+	{ title: 'Categories', path: '/categories' },
+] as const
+---
+
+<header class="flex h-12 items-center justify-between md:h-20">
+	<div
+		id="backdrop"
+		class="fixed top-0 left-0 hidden h-screen w-screen bg-very-dark-blue opacity-40"
+	>
+	</div>
+	<img src="/logo.svg" class="h-9" />
+	<button
+		id="open-menu-button"
+		type="button"
+		aria-label="Open navigation menu"
+		class="md:hidden"
+	>
+		<img src="/icon-menu.svg" />
+	</button>
+	<nav
+		id="navigation-menu"
+		class="fixed top-0 right-0 flex h-screen w-64 translate-x-64 flex-col bg-white p-8 transition-transform md:static md:h-auto md:w-auto md:translate-x-0 md:p-0 md:transition-none"
+	>
+		<div class="text-end md:hidden">
+			<button
+				id="close-menu-button"
+				aria-label="Close navigation menu"
+				type="button"
+				class="w-max"
+				><img src="icon-menu-close.svg" />
+			</button>
+		</div>
+		<ul class="mt-24 flex flex-col gap-8 text-xl md:mt-2 md:flex-row">
+			{
+				menus.map(({ title, path }) => (
+					<li>
+						<a
+							class="cursor-pointer text-dark-grayish-blue hover:text-soft-orange"
+							href={path}
+						>
+							{title}
+						</a>
+					</li>
+				))
+			}
 		</ul>
 	</nav>
 </header>
+
+<script>
+	const backdrop = document.getElementById('backdrop')
+	const openMenuButton = document.getElementById('open-menu-button')
+	const closeMenuButton = document.getElementById('close-menu-button')
+	const navigationMenu = document.getElementById('navigation-menu')
+
+	const hiddenClass = 'hidden'
+	const translateClass = 'translate-x-64'
+
+	openMenuButton?.addEventListener('click', () => {
+		backdrop?.classList.remove(hiddenClass)
+		navigationMenu?.classList.remove(translateClass)
+	})
+
+	closeMenuButton?.addEventListener('click', () => {
+		backdrop?.classList.add(hiddenClass)
+		navigationMenu?.classList.add(translateClass)
+	})
+</script>

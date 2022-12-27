@@ -1,0 +1,13 @@
+---
+export interface Props {
+	title: string
+	description: string
+}
+
+const { title, description } = Astro.props
+---
+
+<div class="text-white">
+	<a class="cursor-pointer text-xl font-bold hover:text-soft-orange">{title}</a>
+	<p class="mt-2">{description}</p>
+</div>
