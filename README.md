@@ -35,7 +35,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: <https://github.com/Tsuyoshi84/news-homepage>
-- Live Site URL: <https://vercel.com/tsuyoshi84/news-homepage>
+- Live Site URL: <https://news-homepage-five-kappa.vercel.app/>
 
 ## My process
 
