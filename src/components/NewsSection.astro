@@ -22,7 +22,7 @@ const { class: className } = Astro.props
 ---
 
 <section class:list={['bg-very-dark-blue px-5 py-7', className]}>
-	<h2 class="mb-8 text-3xl text-soft-orange">New</h2>
+	<h2 class="mb-8 text-3xl font-bold text-soft-orange">New</h2>
 	{
 		newsList.map(({ title, description }, index) => {
 			const isLast = index === newsList.length - 1
