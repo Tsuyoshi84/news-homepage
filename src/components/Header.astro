@@ -8,7 +8,7 @@ const menus = [
 ] as const
 ---
 
-<header class="flex h-12 items-center justify-between md:h-20">
+<header class="flex h-12 items-center justify-between md:h-40">
 	<div
 		id="backdrop"
 		class="fixed top-0 left-0 hidden h-screen w-screen bg-very-dark-blue opacity-40"
@@ -41,7 +41,7 @@ const menus = [
 				menus.map(({ title, path }) => (
 					<li>
 						<a
-							class="cursor-pointer text-dark-grayish-blue hover:text-soft-orange"
+							class="text-dark-grayish-blue hover:text-soft-orange cursor-pointer"
 							href={path}
 						>
 							{title}

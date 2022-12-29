@@ -14,11 +14,12 @@ const { number, title, content, image } = Astro.props
 <div class="flex gap-5">
 	<div class="w-[28%] flex-none">
 		<Picture
-			class="object-cover"
+			class="object-cover h-full"
 			src={image}
 			sizes="(max-width: 640px) 30vw, 400px"
 			alt={title}
 			widths={[200, 400]}
+			width={200}
 			height={254}
 			aspectRatio="200:254"
 		/>

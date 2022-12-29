@@ -17,7 +17,7 @@ module.exports = {
 			widest: '0.25em',
 		},
 		gridTemplateColumns: {
-			main: '60% minmax(min-content, 40%);',
+			main: '65% minmax(min-content, 35%);',
 		},
 		gridTemplateRows: {
 			main: 'min-content min-content',
