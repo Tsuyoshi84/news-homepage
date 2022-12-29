@@ -1,16 +1,28 @@
 ---
+import { Picture } from '@astrojs/image/components'
+
 export interface Props {
 	number: string
 	title: string
 	content: string
-	imagePath: string
+	image: ImageMetadata
 }
 
-const { number, title, content, imagePath } = Astro.props
+const { number, title, content, image } = Astro.props
 ---
 
 <div class="flex gap-5">
-	<img class="w-[28%] object-cover" src={imagePath} alt={title} />
+	<div class="w-[28%] flex-none">
+		<Picture
+			class="object-cover"
+			src={image}
+			sizes="(max-width: 640px) 30vw, 400px"
+			alt={title}
+			widths={[200, 400]}
+			height={254}
+			aspectRatio="200:254"
+		/>
+	</div>
 	<div class="flex flex-col justify-between">
 		<div class="text-3xl font-semibold text-grayish-blue">{number}</div>
 		<a class="cursor-pointer text-xl font-bold hover:text-soft-orange"

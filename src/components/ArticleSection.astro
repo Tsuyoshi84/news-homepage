@@ -1,24 +1,27 @@
 ---
 import ArticleCard from './ArticleCard.astro'
+import Image01 from '~/assets/image-retro-pcs.jpg'
+import Image02 from '~/assets/image-top-laptops.jpg'
+import Image03 from '~/assets/image-gaming-growth.jpg'
 
 const articles = [
 	{
 		number: '01',
 		title: 'Reviving Retro PCs',
 		content: 'What happens when old PCs are given modern upgrades?',
-		imagePath: 'image-retro-pcs.jpg',
+		imagePath: Image01,
 	},
 	{
 		number: '02',
 		title: 'Top 10 Laptops of 2022',
 		content: 'Our best picks for various needs and budgets.',
-		imagePath: 'image-top-laptops.jpg',
+		imagePath: Image02,
 	},
 	{
 		number: '03',
 		title: 'The Growth of Gaming',
 		content: 'How the pandemic has sparked fresh opportunities.',
-		imagePath: 'image-gaming-growth.jpg',
+		imagePath: Image03,
 	},
 ] as const
 
@@ -32,7 +35,7 @@ const { class: className } = Astro.props
 				number={number}
 				title={title}
 				content={content}
-				imagePath={imagePath}
+				image={imagePath}
 			/>
 		))
 	}
