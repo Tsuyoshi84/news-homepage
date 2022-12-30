@@ -14,7 +14,7 @@ const menus = [
 		class="fixed top-0 left-0 hidden h-screen w-screen bg-very-dark-blue opacity-40"
 	>
 	</div>
-	<img src="/logo.svg" class="h-9" />
+	<img src="/logo.svg" class="h-9" alt="News Homepage" />
 	<button
 		id="open-menu-button"
 		type="button"
@@ -36,7 +36,7 @@ const menus = [
 				><img src="icon-menu-close.svg" />
 			</button>
 		</div>
-		<ul class="mt-24 flex flex-col gap-8 text-xl md:mt-2 md:flex-row">
+		<ul class="mt-24 flex flex-col gap-8 text-lg md:mt-2 md:flex-row">
 			{
 				menus.map(({ title, path }) => (
 					<li>

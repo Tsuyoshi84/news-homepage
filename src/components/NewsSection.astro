@@ -22,12 +22,12 @@ const { class: className } = Astro.props
 ---
 
 <section class:list={['bg-very-dark-blue px-5 py-7', className]}>
-	<h2 class="mb-8 text-3xl font-bold text-soft-orange">New</h2>
+	<h2 class="mb-8 text-4xl font-bold text-soft-orange">New</h2>
 	{
 		newsList.map(({ title, description }, index) => {
 			const isLast = index === newsList.length - 1
 			const card = <NewsCard title={title} description={description} />
-			const hr = isLast ? null : <hr class="my-8 text-dark-grayish-blue" />
+			const hr = isLast ? null : <hr class="text-dark-grayish-blue my-8" />
 
 			return (
 				<>
