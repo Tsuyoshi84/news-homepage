@@ -16,12 +16,9 @@ module.exports = {
 			normal: '0',
 			widest: '0.25em',
 		},
-		gridTemplateColumns: {
-			main: '65% minmax(min-content, 35%);',
-		},
 		gridTemplateRows: {
-			main: 'min-content min-content',
-			'main-section': 'minmax(min-content, 1fr) min-content min-content',
+			main: 'min-content min-content min-content',
+			'3-min-content': 'repeat(3, min-content)',
 		},
 	},
 	plugins: [],

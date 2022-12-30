@@ -6,12 +6,13 @@ export interface Props {
 	title: string
 	content: string
 	image: ImageMetadata
+	class: string
 }
 
-const { number, title, content, image } = Astro.props
+const { number, title, content, image, class: className } = Astro.props
 ---
 
-<div class="flex gap-5">
+<div class:list={['flex gap-5', className]}>
 	<div class="w-[28%] flex-none">
 		<Picture
 			class="object-cover h-full"

@@ -28,10 +28,11 @@ const articles = [
 const { class: className } = Astro.props
 ---
 
-<section class:list={['flex flex-col lg:flex-row', 'gap-8', className]}>
+<>
 	{
 		articles.map(({ number, title, content, imagePath }) => (
 			<ArticleCard
+				class={className}
 				number={number}
 				title={title}
 				content={content}
@@ -39,4 +40,4 @@ const { class: className } = Astro.props
 			/>
 		))
 	}
-</section>
+</>
